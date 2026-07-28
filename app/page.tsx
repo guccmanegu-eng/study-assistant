@@ -111,21 +111,22 @@ export default function Home() {
 
 
     {/* Grade */}
-    <div
-      className="bg-[#FF8A6E] rounded-[20px] p-8 h-72 shadow-[6px_6px_0px_0px_black] border-4 border-black transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:-translate-y-2 hover:rotate-1 hover:scale-[1.03] active:-translate-y-1 active:shadow-none animate-[float_4s_ease-in-out_infinite] [animation-delay:1s]"
-    >
-      <div className="text-7xl">
-        🏆
-      </div>
-
-      <h2 className="text-3xl font-bold mt-6">
-        Grade
-      </h2>
-
-      <p>
-        Average: 8.1
-      </p>
+      <AnimatedLink
+    href="/grades"
+    className="bg-[#FF8A6E] rounded-[20px] p-8 h-72 shadow-[6px_6px_0px_0px_black] border-4 border-black transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:-translate-y-2 hover:rotate-1 hover:scale-[1.03] active:-translate-y-1 active:shadow-none animate-[float_4s_ease-in-out_infinite] [animation-delay:1s]"
+  >
+    <div className="text-7xl">
+      🏆
     </div>
+
+    <h2 className="text-3xl font-bold mt-6">
+      Grades
+    </h2>
+
+    <p className="mt-2">
+      View your grades.
+    </p>
+  </AnimatedLink>
 
   </div>
 
