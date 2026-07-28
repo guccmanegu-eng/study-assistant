@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Study Assistant 📚
 
-First, run the development server:
+This is a simple web based assistant for studying! You can start a focus session, that will last 25 minutes before telling you to take a break, see your homework and for when its scheduled, and see your grades and calculate averages.
+
+The website is not fully functional yet, since I have only recently started development. Grades and homework aren't functional yet, but the focus timer works. 
+
+I will be adding grades and homework functionallity in the next update.
+
+## Demo Link
+
+https://study-assistant-steel-gamma.vercel.app/
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Background Color | ![#f3e8d8](https://dummyimage.com/10/f3e8d8/white?text=+) #f3e8d8 |
+| Button Hover Color | ![#ffa936](https://dummyimage.com/10/ffa936/white?text=+) #ffa936 |
+
+## Deployment
+
+### To deploy this project:
+
+First download the LTS Version from https://nodejs.org/en
+
+Check if the installation is succesfull by running node -v
+
+---
+
+Then download and install git from https://git-scm.com/install
+
+Check if the installation is succesfull by running git --Version
+
+---
+
+Clone the github repository with
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/guccmanegu-eng/study-assistant.git
+```
+Then run the following command so you are inside the correct folder.
+
+```bash
+cd study-assistant
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+install all requirements with
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
+### Starting the local server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Start the local server, so the assistant is ready to use with:
+```bash
+  npm run dev
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## This readme.md is made with a website i found online, https://readme.so
