@@ -39,7 +39,11 @@ export default function Homework() {
             transition={{
                 duration: 0.55,
                 ease: [0.65, 0, 0.35, 1],
-            }} className="min-h-screen bg-[#f3e8d8] text-black flex">
+            }} className="animated-bg flex min-h-screen items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/background.png')"}}>
+
+            <button className="relative top-[-100] left-[1050] inline-flex items-center justify-center gap-2 bg-[#f3e8d8] rounded-[20px] px-20 py-8 border-4 border-black shadow-[6px_6px_0px_0px_black] transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:scale-105 hover:bg-[#ffbb00]">
+                    <span className="homework-text">+ Add Homework</span></button>
 
             <div className="fixed top-8 left-8 z-50">
                         <AnimatedLink
@@ -56,15 +60,14 @@ export default function Homework() {
                     <p className="text-zinc-400 mt-2">Manage your assignments.</p>
                     </div>
 
-                <button className="inline-flex items-center justify-center gap-2 bg-[#f3e8d8] rounded-[20px] px-20 py-8 border-4 border-black shadow-[6px_6px_0px_0px_black] transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:scale-105 hover:bg-[#ffbb00]">
-                    <span className="homework-text">+ Add Homework</span></button>
+                
                 </div>
 
                 <div className="mt-10 space-y-5 fixed top-100 left-8 z-50">
                     {assignments.map((item, index) => (
                         <div
                         key={index}
-                        className="bg-[#f3e8d8] rounded-2x1 p-6 w-[calc(100vw-75px)] flex justify-between items-center border-black border-4"
+                        className="bg-[#f3e8d8] rounded-2x1 p-6 w-[calc(100vw-75px)] flex justify-between items-center border-black border-4 rounded-2xl"
                         >
                             <div className="flex gap-5 items-center">
                                 <input

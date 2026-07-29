@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import WaveText from "@/components/WaveText";
 import AnimatedLink from "@/components/AnimatedLink";
 import { usePageTransition } from "@/components/TransitionProvider";
@@ -51,7 +51,8 @@ export default function Timer() {
             transition={{
                 duration: 0.55,
                 ease: [0.65, 0, 0.35, 1],
-            }} className="h-screen bg-[#f3e8d8] text-black p-8 overflow-hidden">
+            }} className="h-screen animated-bg text-black p-8 overflow-hidden"
+            style={{backgroundImage: "url('/background.png')"}}>
 
             <div className="fixed top-8 left-8 z-50">
             <AnimatedLink

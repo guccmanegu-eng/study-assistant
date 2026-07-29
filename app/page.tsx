@@ -19,7 +19,8 @@ export default function Home() {
       duration: 0.55,
       ease: [0.65, 0, 0.35, 1],
     }}
-    className="h-screen bg-[#f3e8d8] text-black p-8 overflow-hidden">
+    className="animated-bg h-screen text-black p-8 overflow-hidden"
+    style={{backgroundImage: "url('/background.png')"}}>
       <motion.div
       initial={{
   y: 80,
