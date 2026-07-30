@@ -22,9 +22,16 @@
 }
 
 body {
-  background: #f3e8d8;
+  background: url('/background.png');
   color: white;
   font-family: "Bricolage Grotesque", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  cursor: url("/Normal Select.cur"), auto;
+}
+
+button:hover,
+a:hover
+[role="button"]:hover{
+  cursor: url("/Alternate Select.cur"), pointer;
 }
 
 @keyframes float {
@@ -63,6 +70,7 @@ body {
   font-family: "Anton", sans-serif;
   font-weight: 800;
   font-size: 2rem;
+  color: black;
   letter-spacing: 0.08em;
   line-height: 1;
   transform: scaleX(1);

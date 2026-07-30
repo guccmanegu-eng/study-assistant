@@ -48,19 +48,13 @@ export default function Homework() {
             <div className="fixed top-8 left-8 z-50">
                         <AnimatedLink
                         href="/"
-                        className="inline-flex items-center justify-center gap-2 bg-[#f3e8d8] rounded-[20px] px-20 py-8 border-4 border-black shadow-[6px_6px_0px_0px_black] transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:scale-105 hover:bg-[#ffbb00]">
+                        className="inline-flex items-center justify-center gap-2 bg-[#f3e8d8] text-black rounded-[20px] px-20 py-8 border-4 border-black shadow-[6px_6px_0px_0px_black] transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:scale-105 hover:bg-[#ffbb00]">
                             <span className="back-text">BACK</span>
                         </AnimatedLink>
             
                         </div>
             <section className="flex-1 p-10">
                 <div className="flex justify-between items-center">
-                    <div>
-                    <h2 className="text-5x1 font-bold">Homework</h2>
-                    <p className="text-zinc-400 mt-2">Manage your assignments.</p>
-                    </div>
-
-                
                 </div>
 
                 <div className="mt-10 space-y-5 fixed top-100 left-8 z-50">
@@ -75,7 +69,7 @@ export default function Homework() {
                                 className="w-6 h-6"
                                 />
                             <div>
-                                <h3 className="text-xl font-semibold">
+                                <h3 className="text-xl text-black font-semibold">
                                     {item.title}
                                 </h3>
 
@@ -85,7 +79,7 @@ export default function Homework() {
                             </div>
                             </div>
 
-                            <div className="text-right">
+                            <div className="text-right text-black">
                                 <p>
                                     Due: {item.due}
                                 </p>
