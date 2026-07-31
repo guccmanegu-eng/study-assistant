@@ -42,7 +42,7 @@ export default function Homework() {
             }} className="animated-bg flex min-h-screen items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/background.png')"}}>
 
-            <button className="relative top-[-100] left-[1050] inline-flex items-center justify-center gap-2 bg-[#f3e8d8] rounded-[20px] px-20 py-8 border-4 border-black shadow-[6px_6px_0px_0px_black] transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:scale-105 hover:bg-[#ffbb00]">
+            <button className="flex absolute top-[320] left-[1800] inline-flex items-center justify-center gap-2 bg-[#f3e8d8] rounded-[20px] px-20 py-8 border-4 border-black shadow-[6px_6px_0px_0px_black] transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:scale-105 hover:bg-[#ffbb00]">
                     <span className="homework-text">+ Add Homework</span></button>
 
             <div className="fixed top-8 left-8 z-50">

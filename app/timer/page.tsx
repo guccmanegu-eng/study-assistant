@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import WaveText from "@/components/WaveText";
 import AnimatedLink from "@/components/AnimatedLink";
 import { usePageTransition } from "@/components/TransitionProvider";
+import { AlarmClockCheck } from "lucide-react";
 
 export default function Timer() {
 
@@ -64,8 +65,8 @@ export default function Timer() {
             </div>
 
             <section className="flex-1 flex flex-col items-center justify-center">
-            <h2 className="text-5xl font-bold mb-10">
-            <WaveText text="Study Timer ⏱️" />
+            <h2 className="flex items-center gap-2 text-5xl font-bold mb-10">
+            <WaveText text="Study Timer" /> <AlarmClockCheck size={64} strokeWidth={2.5}/>
             </h2>
 
             <motion.div className="bg-[#f3e8d8] border-black border-4 rounded-3xl p-12">
