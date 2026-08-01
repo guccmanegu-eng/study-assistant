@@ -14,14 +14,20 @@ export default function Homework() {
     const [subject, setSubject] = useState("");
     const [due, setDue] = useState("");
     const [priority, setPriority] = useState("Medium");
-    const [assignments, setAssignments] = useState(() => {
-        if (typeof window === "undefined") return[];
-        
-        const saved = localStorage.getItem("assignments");
-        
-        if(saved) {
-        return JSON.parse(saved);
+    type Assignment = {
+    subject: string;
+    title: string;
+    due: string;
+    priority: string;
     };
+    const [assignments, setAssignments] = useState<Assignment[]>(() => {
+    if (typeof window === "undefined") return [];
+
+    const saved = localStorage.getItem("assignments");
+
+    if (saved) {
+        return JSON.parse(saved);
+    }
 
     return [
         {
