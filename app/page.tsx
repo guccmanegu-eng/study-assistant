@@ -73,7 +73,7 @@ export default function Home() {
             className="bg-[#ffa936] rounded-[20px] px-6 py-4 shadow-[4px_4px_0px_0px_black] hover:scale-105 transition">
               <p className="flex items-center gap-2 font-bold text-xl">
                 <Star size={22} strokeWidth={2.5}/> 
-                <span>Level {session?.user.level}</span>
+                <span>Level {session?.user?.level}</span>
               </p>
 
               <p className="flex items-center gap-2 font-bold text-xl">
