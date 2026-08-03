@@ -5,11 +5,15 @@ import WaveText from "@/components/WaveText";
 import AnimatedLink from "@/components/AnimatedLink";
 import { useState } from "react";
 import { Flame, Package, Star, TreePalm, Trophy, LibraryBig, AlarmClockCheck, User, Sparkles } from "lucide-react"
+import ProfileTest from "@/components/ProfileTest";
+import AuthButtons from "@/components/AuthButtons";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
   const { leaving } = usePageTransition();
   const [showInventory, setShowInventory] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const { data: session } = useSession();
 
   return (
     <motion.main
@@ -59,22 +63,24 @@ export default function Home() {
               </h1>
 
               <p className="mt-2 text-lg text-[#666]">
-                Welcome back, Yassin!
+                Welcome back, <ProfileTest/>!
               </p>
             </div>
-
+            <div className="flex flex-col gap-4 items-end">
+            <AuthButtons/>
             <div 
             onClick={() => setProfileOpen(true)}
             className="bg-[#ffa936] rounded-[20px] px-6 py-4 shadow-[4px_4px_0px_0px_black] hover:scale-105 transition">
               <p className="flex items-center gap-2 font-bold text-xl">
                 <Star size={22} strokeWidth={2.5}/> 
-                <span>Level 5</span>
+                <span>Level {session?.user.level}</span>
               </p>
 
               <p className="flex items-center gap-2 font-bold text-xl">
                 <Flame size={22} strokeWidth={2.5}/>
-                <span>7 day streak</span>
+                <span>{session?.user.streak}</span>
               </p>
+              </div>
             </div>
           </motion.div>
 
@@ -181,8 +187,9 @@ export default function Home() {
         <div
           onMouseEnter={() => setShowInventory(true)}
           onMouseLeave={() => setShowInventory(false)}
-          className="w-[500px] min-w-[500px] h-screen flex items-center justify-center pt-30 p-8 shrink-0 -ml-10"
+          className="w-[500px] min-w-[500px] pt-[180px] px-8 shrink-0 -ml-10"
         >
+          <div className="h-[100px]" />
           <AnimatedLink
             href="/Inventory"
             className="bg-[#87DD3B] rounded-[20px] p-8 h-152 w-[500px] shadow-[6px_6px_0px_0px_black] border-4 border-black transition-all duration-200 ease-[cubic-bezier(.34,1.56,.64,2)] hover:-translate-y-2 hover:rotate-1 hover:scale-[1.03] active:-translate-y-1 active:shadow-none animate-[float_4s_ease-in-out_infinite]"
@@ -223,13 +230,13 @@ export default function Home() {
             </h2>
 
             <p className="flex items-center gap-2 mt-4">
-              <Star size={24} strokeWidth={2.5} fill="yellow"/> <span>Level : 5</span>
+              <Star size={24} strokeWidth={2.5} fill="yellow"/> <span>Level : {session?.user.level}</span>
             </p>
             <p className="flex items-center gap-2 mt-4">
-              <Flame size={24} strokeWidth={2.5} fill="orange"/> <span>Current streak: 7 Days</span>
+              <Flame size={24} strokeWidth={2.5} fill="orange"/> <span>Current streak: {session?.user.streak}</span>
             </p>
             <p className="flex items-center gap-2 mt-4">
-              <Sparkles size={24} strokeWidth={2.5} fill="cyan"/> <span>XP: 1,240</span>
+              <Sparkles size={24} strokeWidth={2.5} fill="cyan"/> <span>XP: {session?.user.xp}</span>
             </p>
 
           </motion.div>
