@@ -78,7 +78,7 @@ export default function Home() {
 
               <p className="flex items-center gap-2 font-bold text-xl">
                 <Flame size={22} strokeWidth={2.5}/>
-                <span>{session?.user.streak}</span>
+                <span>{session?.user?.streak}</span>
               </p>
               </div>
             </div>
@@ -230,13 +230,13 @@ export default function Home() {
             </h2>
 
             <p className="flex items-center gap-2 mt-4">
-              <Star size={24} strokeWidth={2.5} fill="yellow"/> <span>Level : {session?.user.level}</span>
+              <Star size={24} strokeWidth={2.5} fill="yellow"/> <span>Level : {session?.user?.level}</span>
             </p>
             <p className="flex items-center gap-2 mt-4">
-              <Flame size={24} strokeWidth={2.5} fill="orange"/> <span>Current streak: {session?.user.streak}</span>
+              <Flame size={24} strokeWidth={2.5} fill="orange"/> <span>Current streak: {session?.user?.streak}</span>
             </p>
             <p className="flex items-center gap-2 mt-4">
-              <Sparkles size={24} strokeWidth={2.5} fill="cyan"/> <span>XP: {session?.user.xp}</span>
+              <Sparkles size={24} strokeWidth={2.5} fill="cyan"/> <span>XP: {session?.user?.xp}</span>
             </p>
 
           </motion.div>
