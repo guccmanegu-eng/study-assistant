@@ -19,6 +19,12 @@ export async function POST(req: Request) {
             );
         }
 
+        if (!user.password) {
+            return Response.json(
+                {error: "no password set"},
+                { status: 400 }
+            );
+        }
         const passwordCorrect = await bcrypt.compare(
             password,
             user.password
