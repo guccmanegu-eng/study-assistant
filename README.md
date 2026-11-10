@@ -9,7 +9,7 @@ I will be adding grades and homework functionallity in the next update.
 
 ## Demo Link
 
-https://study-assistant-steel-gamma.vercel.app/
+https://study-assistant-bijc.vercel.app/
 
 ## Color Reference
 
