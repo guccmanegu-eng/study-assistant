@@ -5,7 +5,11 @@ This is a simple web based assistant for studying! You can start a focus session
 
 The website is not fully functional yet, since I have only recently started development. Grades aren't functional yet, but the focus timer works. 
 
-I will be adding grades and homework functionallity in the next update.
+I will be adding grades and homework functionallity in the next update. 
+
+## Most recent changes
+
+Added accounts with a database for it, homework, and a working inventory that saves!
 
 ## Demo Link
 
