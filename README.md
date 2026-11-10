@@ -3,7 +3,7 @@
 
 This is a simple web based assistant for studying! You can start a focus session, that will last 25 minutes before telling you to take a break, see your homework and for when its scheduled, and see your grades and calculate averages.
 
-The website is not fully functional yet, since I have only recently started development. Grades and homework aren't functional yet, but the focus timer works. 
+The website is not fully functional yet, since I have only recently started development. Grades aren't functional yet, but the focus timer works. 
 
 I will be adding grades and homework functionallity in the next update.
 
